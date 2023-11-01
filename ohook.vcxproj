@@ -72,10 +72,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>sppc32</TargetName>
+    <OutDir>$(SolutionDir)out\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetName>sppc64</TargetName>
+    <OutDir>$(SolutionDir)out\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

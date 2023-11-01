@@ -401,3 +401,4 @@ FodyWeavers.xsd
 *.lib
 *.exp
 *.vcxproj.filters
+out/
