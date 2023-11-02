@@ -110,12 +110,14 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(CoreLibraryDependencies);shlwapi.lib;$(SolutionDir)sppcs32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);shlwapi.lib;$(SolutionDir)lib\sppcs32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>$(SolutionDir)sppc.def</ModuleDefinitionFile>
     </Link>
     <PreLinkEvent>
-      <Command>lib /def:$(SolutionDir)sppcs32.def /out:$(SolutionDir)sppcs32.lib /machine:x86</Command>
-      <Message>Generate LIB file for sppcs.dll</Message>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,7 +132,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>$(SolutionDir)sppc.def</ModuleDefinitionFile>
-      <AdditionalDependencies>$(CoreLibraryDependencies);shlwapi.lib;$(SolutionDir)sppcs64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);shlwapi.lib;$(SolutionDir)lib\sppcs64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
     </Link>
@@ -143,8 +145,10 @@
       </Message>
     </PreBuildEvent>
     <PreLinkEvent>
-      <Command>lib /def:$(SolutionDir)sppcs64.def /out:$(SolutionDir)sppcs64.lib /machine:x64</Command>
-      <Message>Generate LIB file for sppcs.dll</Message>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

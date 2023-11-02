@@ -398,7 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Other stuff
-*.lib
+/*.lib
 *.exp
 *.vcxproj.filters
 out/
