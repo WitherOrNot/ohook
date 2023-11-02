@@ -110,8 +110,9 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(CoreLibraryDependencies);shlwapi.lib;$(SolutionDir)lib\sppcs32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;shlwapi.lib;advapi32.lib;$(SolutionDir)lib\sppcs32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>$(SolutionDir)sppc.def</ModuleDefinitionFile>
+      <EntryPointSymbol>DllMain@12</EntryPointSymbol>
     </Link>
     <PreLinkEvent>
       <Command>
@@ -132,9 +133,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <ModuleDefinitionFile>$(SolutionDir)sppc.def</ModuleDefinitionFile>
-      <AdditionalDependencies>$(CoreLibraryDependencies);shlwapi.lib;$(SolutionDir)lib\sppcs64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;shlwapi.lib;advapi32.lib;$(SolutionDir)lib\sppcs64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
+      <EntryPointSymbol>DllMain</EntryPointSymbol>
     </Link>
     <PreBuildEvent>
       <Command>
