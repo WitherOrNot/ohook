@@ -23,31 +23,6 @@ BOOL IsGracePeriodProduct(HSLC hSLC, SLID *pProductSkuId) {
     return FALSE;
 }
 
-VOID ModifyHeartbeatRegistry() {
-    HKEY hKey = 0;
-
-    LSTATUS lStatus = RegOpenKeyExW(
-        HKEY_CURRENT_USER,
-        L"Software\\Microsoft\\Office\\16.0",
-        0,
-        KEY_ALL_ACCESS,
-        &hKey
-    );
-
-    if(lStatus != ERROR_SUCCESS) return;
-
-    RegSetKeyValueW(
-        hKey,
-        L"Common\\Licensing\\Resiliency",
-        L"TimeOfLastHeartbeatFailure",
-        REG_SZ,
-        L"2040-01-01T00:00:00Z",
-        42
-    );
-
-    RegCloseKey(hKey);
-}
-
 HRESULT WINAPI SLGetLicensingStatusInformationHook(
     HSLC hSLC,
     SLID *pAppID,
@@ -77,11 +52,6 @@ HRESULT WINAPI SLGetLicensingStatusInformationHook(
         (*ppLicensingStatus+i)->dwTotalGraceDays = 0;
         (*ppLicensingStatus+i)->hrReason = 0;
         (*ppLicensingStatus+i)->qwValidityExpiration = 0;
-    }
-
-    if(!bIsHeartbeatRegistryModified) {
-        ModifyHeartbeatRegistry();
-        bIsHeartbeatRegistryModified = TRUE;
     }
 
     return hResult;
