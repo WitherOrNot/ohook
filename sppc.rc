@@ -11,12 +11,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName",      "Anomalous Software Deterioration Corporation"
             VALUE "FileDescription",  "ohook SPPC"
-            VALUE "FileVersion",      "0.4.0.0"
+            VALUE "FileVersion",      "0.3.0.0"
             VALUE "InternalName",     "sppc"
             VALUE "LegalCopyright",   "© 2023 Anomalous Software Deterioration Corporation"
             VALUE "OriginalFilename", "sppc.dll"
             VALUE "ProductName",      "ohook"
-            VALUE "ProductVersion",   "0.4.0.0"
+            VALUE "ProductVersion",   "0.3.0.0"
         END
     END
 
